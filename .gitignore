@@ -25,5 +25,8 @@ venv/
 # Ansible
 *.retry
 
+# Environment
+.envrc
+
 # Claude
 .claude/
