@@ -1,0 +1,50 @@
+{
+  "name": "Ansible Development",
+  "runArgs": ["--name", "ansible-dev"],
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "mounts": [
+    {
+      "source": "devcontainer-ansible-base-gh-config",
+      "target": "/home/vscode/.config/gh",
+      "type": "volume"
+    },
+    {
+      "source": "devcontainer-ansible-base-claude-config",
+      "target": "/home/vscode/.claude",
+      "type": "volume"
+    },
+    {
+      "source": "devcontainer-ansible-base-ssh-config",
+      "target": "/home/vscode/.ssh",
+      "type": "volume"
+    }
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "redhat.ansible",
+        "redhat.vscode-yaml",
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "christian-kohler.path-intellisense",
+        "usernamehw.errorlens",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "mkhl.direnv"
+      ]
+    }
+  },
+  "postStartCommand": "bash .devcontainer/post-start.sh",
+  "remoteUser": "vscode",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb",
+    "storage": "8gb"
+  }
+}
