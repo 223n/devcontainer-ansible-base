@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# Ansible
+*.retry
+
+# Claude
+.claude/
