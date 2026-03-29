@@ -1,0 +1,34 @@
+# ========================================
+# 開発環境用環境変数テンプレート
+# このファイルは .envrc にコピーされて使用されます
+# direnv により自動的に環境変数が設定されます
+# ========================================
+
+# 環境識別子
+export ENVIRONMENT=development
+
+# Ansible設定
+export ANSIBLE_CONFIG=./ansible.cfg
+# export ANSIBLE_VAULT_PASSWORD_FILE=./.vault_pass
+
+# SSH設定（必要に応じて設定）
+# export ANSIBLE_PRIVATE_KEY_FILE=~/.ssh/id_ed25519
+
+# デバッグ設定
+# export ANSIBLE_VERBOSITY=1
+
+# ========================================
+# 使用方法
+# ========================================
+# 1. このファイルを .envrc にコピーします
+#    cp .envrc.template .envrc
+#
+# 2. .envrc を編集して実際の値を設定します
+#    nano .envrc
+#
+# 3. direnv を許可します（DevContainer起動時に自動実行されます）
+#    direnv allow
+#
+# 4. ディレクトリに移動すると自動的に環境変数が読み込まれます
+#
+# 注意: .envrc は .gitignore に含まれており、Gitにコミットされません
