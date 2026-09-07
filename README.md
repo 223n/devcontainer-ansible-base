@@ -157,3 +157,7 @@ docker pull ghcr.io/223n/devcontainer-ansible-base:latest
 - `1.0`: マイナーバージョン
 - `1`: メジャーバージョン
 - `sha-<commit-sha>`: 特定コミット
+
+## ドキュメント
+
+- [Ansible Vault: 機密情報の暗号化ガイド](docs/ansible-vault.md)
